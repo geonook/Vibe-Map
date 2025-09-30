@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/main/typescript/*"],
+      "@components/*": ["src/main/typescript/components/*"],
+      "@core/*": ["src/main/typescript/core/*"],
+      "@utils/*": ["src/main/typescript/utils/*"],
+      "@models/*": ["src/main/typescript/models/*"],
+      "@services/*": ["src/main/typescript/services/*"],
+      "@api/*": ["src/main/typescript/api/*"],
+      "@map/*": ["src/main/typescript/map/*"],
+      "@audio/*": ["src/main/typescript/audio/*"],
+      "@config/*": ["src/main/resources/config/*"],
+      "@styles/*": ["src/main/resources/styles/*"],
+      "@assets/*": ["src/main/resources/assets/*"]
+    },
+
+    /* Type checking */
+    "types": ["vite/client", "vitest/globals"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}

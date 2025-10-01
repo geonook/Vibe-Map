@@ -12,7 +12,7 @@ import type {
   SegmentFeatures,
 } from '@models/index';
 import { rerankRoutes } from '@core/vibe-scoring';
-import polyline from '@mapbox/polyline';
+import * as polyline from '@mapbox/polyline';
 
 const VALHALLA_ENDPOINT = import.meta.env.VITE_VALHALLA_URL || 'http://localhost:8002';
 

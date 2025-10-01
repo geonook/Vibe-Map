@@ -10,7 +10,7 @@ import type {
   EmotionState,
   HapticIntensity,
 } from '@models/index';
-import { Feature, Point } from 'geojson';
+import type { Feature, Point, LineString } from 'geojson';
 import { distance, bearing } from '@turf/turf';
 import { recalculateRoute } from '@services/routing';
 

@@ -42,6 +42,11 @@
     "zustand": "^4.5.5",
     "geojson": "^0.5.0",
     "@turf/turf": "^7.1.0",
+    "@turf/helpers": "^7.1.0",
+    "@turf/distance": "^7.1.0",
+    "@turf/bearing": "^7.1.0",
+    "@mapbox/polyline": "^1.2.1",
+    "howler": "^2.2.4",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.5.2"
   },
@@ -50,6 +55,7 @@
     "@types/react-dom": "^18.3.0",
     "@types/maplibre-gl": "^3.1.0",
     "@types/geojson": "^7946.0.14",
+    "@types/howler": "^2.2.11",
     "@typescript-eslint/eslint-plugin": "^8.8.0",
     "@typescript-eslint/parser": "^8.8.0",
     "@vitejs/plugin-react": "^4.3.2",
@@ -68,7 +74,10 @@
     "postcss": "^8.4.47",
     "autoprefixer": "^10.4.20",
     "vite-plugin-pwa": "^0.20.5",
-    "workbox-window": "^7.1.0"
+    "workbox-window": "^7.1.0",
+    "workbox-precaching": "^7.1.0",
+    "workbox-routing": "^7.1.0",
+    "workbox-strategies": "^7.1.0"
   },
   "engines": {
     "node": ">=18.0.0",

@@ -233,16 +233,18 @@ private switchAmbience(newAmbient: AmbienceType, targetVolume: number) {
 
 ### 已修正的關鍵問題
 
-| 項目 | 原方案 | 修正方案 | 檔案位置 |
-|------|--------|----------|---------|
-| **Valhalla 權重** | 直接注入 costing | 前端 post-ranking | `services/routing.ts` |
-| **PostGIS 查詢** | 直接用 geography | bbox 預篩 + geography | `supabase/migrations/001_init_schema.sql` |
-| **評分函式** | 無空值檢查 | 加入信心度評分 | `core/vibe-scoring.ts` |
-| **偏航偵測** | 只看距離 | 距離 + 方位 + 連續性 | `core/navigation-engine.ts` |
-| **音景切換** | 直接切換 | 平滑淡入淡出 | `audio/ambience-controller.ts` |
-| **向量磚** | 直接引用 .mbtiles | 解包或 tile server | 見部署指南 |
-| **Service Worker** | 只有 runtime 快取 | precache + runtime | `vite.config.ts` |
-| **隱私保護** | 直接存 timestamp | 匿名化到小時 | `supabase/migrations/001_init_schema.sql` |
+| # | 項目 | 原方案 | 修正方案 | 檔案位置 | 狀態 |
+|---|------|--------|----------|---------|------|
+| 1 | **Valhalla 權重** | 直接注入 costing | 前端 post-ranking | `services/routing.ts` | ✅ 已完成 |
+| 2 | **PostGIS 查詢** | 直接用 geography | bbox 預篩 + geography | `supabase/migrations/001_init_schema.sql` | ✅ 已完成 |
+| 3 | **評分函式** | 無空值檢查 | 加入信心度評分 | `core/vibe-scoring.ts` | ✅ 已完成 |
+| 4 | **偏航偵測** | 只看距離 | 距離 + 方位 + 連續性 | `core/navigation-engine.ts` | ✅ 已完成 |
+| 5 | **音景切換** | 直接切換 | 平滑淡入淡出 | `audio/ambience-controller.ts` | ✅ 已完成 |
+| 6 | **隱私保護** | 直接存 timestamp | 匿名化到小時 | `supabase/migrations/001_init_schema.sql` | ✅ 已完成 |
+| 7 | **Service Worker** | 只有 runtime 快取 | precache + runtime | `vite.config.ts` | ✅ 已完成 |
+| 8 | **向量磚** | 直接引用 .mbtiles | 解包或 tile server | DEPLOYMENT.md | ✅ 已記錄 |
+| 9 | **deck.gl 記憶體** | 無清理機制 | 追踪並清理舊實例 | 待實作 UI 時 | 📋 待實作 |
+| 10 | **Edge Functions** | 冷啟動慢 | warmup 預熱機制 | 待實作 | 📋 待實作 |
 
 ---
 
